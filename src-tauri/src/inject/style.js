@@ -1,20 +1,20 @@
 window.addEventListener('DOMContentLoaded', _event => {
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.type = "text/css";
+  // link.media = "print";
+  // link.onload = "this.media='all'"
+  // link.href = "https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css";
+  link.href = "https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css";
+  document.head.append(link);
+
   const css = `
-    // CSS 修改字体
-    *{font-family: "LXGW WenKai Screen" !important;}
-    // 去除 body 滚动条
+    * {font-family: "LXGW Wenkai Screen" !important;}
     body::-webkit-scrollbar{width:0px;height:0px;}
-    // 修改文本两侧边距
     .readerChapterContent {
         margin-left: 2rem;
         margin-right: 2rem;
     }
-    // 字体控制默认透明显示
-    .readerControls_fontSize{opacity:0.3 !important;}
-    .readerControls_fontSize:hover{opacity:1 !important;}
-    // 移除阅读器侧边主题和下载按钮
-    .readerControls_item.dark,.readerControls_item.download { display: none !important; }
-    // 修改亮色主题背景颜色及阴影
     .wr_whiteTheme .app_content{box-shadow: 0 8px 32px rgba(0,25,104,.1) !important ;}
     .wr_whiteTheme .app_content.shelf_container{box-shadow: none !important;}
     html body.wr_whiteTheme,
@@ -27,13 +27,15 @@ window.addEventListener('DOMContentLoaded', _event => {
     .wr_whiteTheme .readerTopBar,
     .wr_whiteTheme .readerBottomBar,
     .wr_whiteTheme .readerBottomSettingPanel,
-    .wr_whiteTheme .recommend_preview_item {
+    .wr_whiteTheme .recommend_preview_item,
+    .wr_whiteTheme .wr_book_detail_footer_float,
+    .wr_whiteTheme .introDialogWrap {
         background-color: #f9f3e8 !important;
     }
-    // 隐藏控制条，底部 hover 显示
     .readerMemberCardTips,
-    .readerTopBar,
-    .readerControls_item,
+    .readerControls_item.download,
+    .readerControls_item.dark,
+    .readerControls_fontSize,
     .navBarOffset {
         display: none !important;
     }
@@ -54,6 +56,7 @@ window.addEventListener('DOMContentLoaded', _event => {
     }
   `;
   const styleElement = document.createElement('style');
+  styleElement.nodeType = 'text/css';
   styleElement.innerHTML = css;
   document.head.appendChild(styleElement);
 });
