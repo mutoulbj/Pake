@@ -430,6 +430,19 @@ window.addEventListener('DOMContentLoaded', _event => {
         top: 88% !important;
         height: 7% !important;
     }
+    .app_content,.readerTopBar {
+        width: 85% !important;
+        max-width: 100% !important;
+    }
+    .readerControls {
+        left: 60% !important;
+    }
+    .readerChapterContent {
+        margin-top: 30px;
+    }
+    .renderTargetContainer {
+        margin-top: 50px;
+    }
   `;
   const styleElement = document.createElement('style');
   styleElement.nodeType = 'text/css';
