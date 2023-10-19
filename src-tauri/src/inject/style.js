@@ -434,6 +434,12 @@ window.addEventListener('DOMContentLoaded', _event => {
         width: 85% !important;
         max-width: 100% !important;
     }
+    .app_content.shelf_container,
+    .app_content.ranking_page_container {
+        width: 100% !important;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
     .readerControls {
         left: 60% !important;
     }
