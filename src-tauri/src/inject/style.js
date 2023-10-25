@@ -449,6 +449,9 @@ window.addEventListener('DOMContentLoaded', _event => {
     .renderTargetContainer {
         margin-top: 50px;
     }
+    .readerContentHeader {
+        margin-top: 70px;
+    }
   `;
   const styleElement = document.createElement('style');
   styleElement.nodeType = 'text/css';
